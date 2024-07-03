@@ -1,3 +1,5 @@
+-- This script moves your playhead back one beat from the infos entered in bpm_set_bpm.lua
+
 BPMInfos = fusion:GetData("BPMInfos")
 
 if BPMInfos ~= nil and comp.CurrentTime > 0 then
@@ -8,7 +10,7 @@ if BPMInfos ~= nil and comp.CurrentTime > 0 then
     local lastValue = nil
     while math.floor(target) < currentTime do
         lastValue = target;
-        target = target + beatLength*BPMInfos.Beats;
+        target = target + beatLength;
     end
     comp.CurrentTime = math.floor(lastValue)
 end

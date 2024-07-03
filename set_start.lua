@@ -1,3 +1,8 @@
+-- This script will create two keyframes at your playhead's position in order
+-- to toggle on the "blend" property of one or multiple nodes.
+-- One keyframe is created at playhead position with the value of 100, and another
+-- one frame earlier at the value of 0.
+
 function len(T)
     local count = 0
     for _ in pairs(T) do count = count + 1 end
